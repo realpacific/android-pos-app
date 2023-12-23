@@ -14,19 +14,19 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun InfoCardRow(label: String, value: String, modifier: Modifier = Modifier) {
-    Row(
-        modifier = modifier
-            .fillMaxWidth()
-            .padding(3.dp),
-        horizontalArrangement = Arrangement.SpaceBetween
-    ) {
-        Text(text = label, fontWeight = FontWeight.Bold)
-        Text(text = value, fontWeight = FontWeight.Medium, fontSize = 15.sp)
-    }
+  Row(
+    modifier = modifier
+        .fillMaxWidth()
+        .padding(3.dp),
+    horizontalArrangement = Arrangement.SpaceBetween
+  ) {
+    Text(text = label, fontWeight = FontWeight.Bold)
+    Text(text = value, fontWeight = FontWeight.Medium, fontSize = 15.sp)
+  }
 }
 
 @Preview
 @Composable
 fun InfoCardRowPreview() {
-    InfoCardRow(label = "Test", value = "Value")
+  InfoCardRow(label = "Test", value = "Value")
 }

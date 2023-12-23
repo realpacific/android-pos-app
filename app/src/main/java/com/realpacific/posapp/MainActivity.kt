@@ -14,26 +14,23 @@ import com.realpacific.posapp.ui.theme.AppTheme
 
 
 class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+  override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
 
-        setContent {
-            AppTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    HomeScreen()
-                }
-            }
+    setContent {
+      AppTheme {
+        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+          HomeScreen()
         }
+      }
     }
+  }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    AppTheme {
-        HomeScreen()
-    }
+  AppTheme {
+    HomeScreen()
+  }
 }
