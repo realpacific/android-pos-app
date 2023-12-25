@@ -1,6 +1,5 @@
 package com.realpacific.posapp.ui.screens
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.realpacific.posapp.ReceiptData
@@ -76,7 +75,7 @@ class HomeViewModel : ViewModel() {
     )
   }
 
-  fun userTappedOut() {
+  fun handleUserTappedOut() {
     _uiState.value = HomeUIState.UserTappedOut(
       userInfo = UserInfo("Prashant Barahi"),
       busInfo = BusInfo(
@@ -90,6 +89,10 @@ class HomeViewModel : ViewModel() {
         "Rs. 15"
       )
     )
+//    viewModelScope.launch {
+//      delay(3000L)
+//      _uiState.value = HomeUIState.Empty
+//    }
   }
 
   fun exit() {
